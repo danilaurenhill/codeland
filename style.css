@@ -208,22 +208,91 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    background: #f8f8f8; }
-    section .tickets:last-child {
-      margin-right: 0; }
-    section .tickets h2 {
-      text-align: center;
-      padding-top: 20px; }
-  section article {
-    margin-bottom: 30px; }
-    section article p {
-      font-size: 18px;
-      text-align: left; }
-    section article h2 {
-      font-size: 24px;
-      text-align: left; }
+    width: 100%;
+    /* @include span-columns(6);
+     background: #f8f8f8;
+     h2 {
+       margin-right: 300px;
+       text-align: center;
+       padding-top: 20px;
+     }*/ }
+    section .tickets .prices {
+      max-width: 12;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px; }
+      section .tickets .prices::after {
+        clear: both;
+        content: "";
+        display: block; }
+      section .tickets .prices .student p {
+        display: inline;
+        font-weight: 500;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        section .tickets .prices .student p:last-child {
+          margin-right: 0; }
+        section .tickets .prices .student p:before {
+          content: ' ';
+          max-width: initial;
+          display: inline-block;
+          height: 13px;
+          width: 13px;
+          margin-right: 10px;
+          border: 1px solid black;
+          margin-top: 10px;
+          background-color: #fffd2e; }
+      section .tickets .prices .individual p {
+        display: inline;
+        font-weight: 500;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        section .tickets .prices .individual p:last-child {
+          margin-right: 0; }
+        section .tickets .prices .individual p:before {
+          content: ' ';
+          max-width: initial;
+          display: inline-block;
+          height: 13px;
+          width: 13px;
+          margin-right: 10px;
+          border: 1px solid black;
+          margin-top: 10px;
+          background-color: #4eff5c; }
+      section .tickets .prices .supporter p {
+        display: inline;
+        font-weight: 500;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        section .tickets .prices .supporter p:last-child {
+          margin-right: 0; }
+        section .tickets .prices .supporter p:before {
+          content: ' ';
+          max-width: initial;
+          display: inline-block;
+          height: 13px;
+          width: 13px;
+          margin-right: 10px;
+          border: 1px solid black;
+          margin-top: 10px;
+          background-color: #4d94ff; }
 
+article {
+  margin-bottom: 30px; }
+  article p {
+    font-size: 18px;
+    text-align: left; }
+  article h2 {
+    font-size: 24px;
+    text-align: left; }
+
+/*}*/
 .description {
   float: left;
   display: block;
@@ -285,6 +354,9 @@ section {
     width: 100%; }
     div.faqs:last-child {
       margin-right: 0; } }
+/*@media only screen and (max-width: 800px){
+  div.tickets { @include span-columns(12); }
+}*/
 @media only screen and (max-width: 1000px) {
   .topics, .description {
     float: left;

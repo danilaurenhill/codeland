@@ -98,13 +98,72 @@ p {
     @include outer-container(100%);
     .faqs, .venue { @include span-columns(6) };
     .tickets {
-      @include span-columns(6);
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      .prices {
+        @include outer-container(12);
+        padding-top: 50px;
+        .student p {
+          display: inline;
+          font-weight: 500;
+          @include span-columns(4);
+          &:before {
+            content: ' ';
+            max-width: initial;
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+            margin-right: 10px;
+            border: 1px solid black;
+            margin-top: 10px;
+            background-color: $yellow;
+          }
+        }
+        .individual p {
+          display: inline;
+          font-weight: 500;
+          @include span-columns(4);
+          &:before {
+            content: ' ';
+            max-width: initial;
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+            margin-right: 10px;
+            border: 1px solid black;
+            margin-top: 10px;
+            background-color: $green;
+          }
+        }
+        .supporter p {
+          display: inline;
+          font-weight: 500;
+          @include span-columns(4);
+          &:before {
+            content: ' ';
+            max-width: initial;
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+            margin-right: 10px;
+            border: 1px solid black;
+            margin-top: 10px;
+            background-color: $blue;
+          }
+        }
+      }
+     /* @include span-columns(6);
       background: #f8f8f8;
       h2 {
+        margin-right: 300px;
         text-align: center;
         padding-top: 20px;
+      }*/
+    }
   }
-}
+
   article {
     margin-bottom: 30px;
     p {
@@ -116,7 +175,7 @@ p {
       text-align: left;
     }
   }
-}
+/*}*/
 
 .description {
   @include span-columns(9);
@@ -162,6 +221,12 @@ p {
 @media only screen and (max-width: 800px){
   div.faqs { @include span-columns(12); }
 }
+
+
+      /*@media only screen and (max-width: 800px){
+        div.tickets { @include span-columns(12); }
+      }*/
+
 
 @media only screen and (max-width: 1000px){
   .topics, .description { @include span-columns(6); }
